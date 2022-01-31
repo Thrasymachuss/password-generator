@@ -1,0 +1,173 @@
+:root {
+  --font-size: 0.85rem;
+}
+
+.main {
+  .form {
+    padding: 1em;
+
+    .option-set {
+      display: flex;
+      flex-direction: column;
+      margin: 1em 0;
+
+      input {
+        min-width: 3em;
+      }
+
+      .flex-row {
+        display: flex;
+        width: 100%;
+
+        .option-label {
+          width: 80%;
+          font-size: var(--font-size);
+          margin-bottom: 0.2em;
+        }
+      }
+
+      .additional-settings {
+        display: flex;
+        flex-direction: column;
+        .flex-row {
+          margin-bottom: 0.15em;
+          label {
+            width: calc(80% - 1em);
+            font-size: var(--font-size);
+            margin: 0.1em 0 0 1em;
+          }
+        }
+      }
+    }
+
+    .option-set.other-characters {
+      > .flex-row {
+        margin-bottom: 0.5em;
+        height: 1em;
+        align-items: center;
+
+        .input-container {
+          input {
+            width: 4em;
+          }
+        }
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .generate-password-btn {
+        height: 3em;
+        border: none;
+        padding: 0 2em;
+        background: #c6d5de;
+        font-size: 1rem;
+        font-weight: 500;
+
+        &:hover {
+          background: #89a1b0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .output-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1em 0;
+
+      .new-password-label {
+        font-size: var(--font-size);
+      }
+
+      .new-password-area {
+        min-width: 10em;
+        height: 5em;
+      }
+    }
+  }
+}
+
+@media (min-width: 22em) {
+  :root {
+    --font-size: 1rem;
+  }
+
+  .main {
+    .form {
+      .option-set.other-characters {
+        > .flex-row {
+          .input-container {
+            input {
+              min-width: 6em;
+            }
+          }
+        }
+      }
+
+      .output-wrap {
+        .new-password-area {
+          min-width: 25em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .main {
+    .form {
+      .option-set.other-characters {
+        > .flex-row {
+          .input-container {
+            input {
+              min-width: 8em;
+            }
+          }
+        }
+      }
+
+      .option-set {
+        flex-direction: row;
+
+        .flex-row {
+          width: 30vw;
+          margin-right: 5em;
+          .option-label {
+            width: 15em;
+          }
+        }
+
+        .additional-settings {
+          flex-direction: row;
+          width: 25em;
+
+          .flex-row:nth-child(3) {
+            label {
+              width: 10em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 80em) {
+  .main {
+    .form {
+      .option-set {
+        > .flex-row {
+          .option-label {
+            width: 30em;
+          }
+          margin-right: 18em;
+        }
+      }
+    }
+  }
+}

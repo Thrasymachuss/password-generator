@@ -1,0 +1,18 @@
+.instructions {
+  padding: 4em 1em 3em;
+
+  .instructions-header {
+    font-size: 1.5rem;
+  }
+
+  .instructions-p {
+    margin: 1em 0;
+  }
+  .charset-list {
+    list-style-position: inside;
+    margin: 0 1em;
+    li {
+      margin: 0.5em 0;
+    }
+  }
+}
